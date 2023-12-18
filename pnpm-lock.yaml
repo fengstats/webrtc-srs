@@ -8,6 +8,9 @@ dependencies:
   axios:
     specifier: ^1.6.2
     version: 1.6.2
+  flv.js:
+    specifier: ^1.6.2
+    version: 1.6.2
   vue:
     specifier: ^3.3.11
     version: 3.3.11(typescript@5.3.3)
@@ -1302,6 +1305,10 @@ packages:
     dev: true
     optional: true
 
+  /es6-promise@4.2.8:
+    resolution: {integrity: sha512-HJDGx5daxeIvxdBxvG2cb9g4tEvwIk3i8+nhX0yGrYmZUzbkdg8QbDevheDB8gd0//uPj4c1EQua8Q+MViT0/w==, tarball: https://registry.npmmirror.com/es6-promise/-/es6-promise-4.2.8.tgz}
+    dev: false
+
   /esbuild@0.19.9:
     resolution: {integrity: sha512-U9CHtKSy+EpPsEBa+/A2gMs/h3ylBC0H0KSqIg7tpztHerLi6nrrcoUJAkNCEPumx8yJ+Byic4BVwHgRbN0TBg==, tarball: https://registry.npmmirror.com/esbuild/-/esbuild-0.19.9.tgz}
     engines: {node: '>=12'}
@@ -1391,6 +1398,13 @@ packages:
       locate-path: 6.0.0
       path-exists: 4.0.0
     dev: true
+
+  /flv.js@1.6.2:
+    resolution: {integrity: sha512-xre4gUbX1MPtgQRKj2pxJENp/RnaHaxYvy3YToVVCrSmAWUu85b9mug6pTXF6zakUjNP2lFWZ1rkSX7gxhB/2A==, tarball: https://registry.npmmirror.com/flv.js/-/flv.js-1.6.2.tgz}
+    dependencies:
+      es6-promise: 4.2.8
+      webworkify-webpack: 2.1.5
+    dev: false
 
   /follow-redirects@1.15.3:
     resolution: {integrity: sha512-1VzOtuEM8pC9SFU1E+8KfTjZyMztRsgEfwQl44z8A25uy13jSzTj6dyK2Df52iV0vgHCfBwLhDWevLn95w5v6Q==, tarball: https://registry.npmmirror.com/follow-redirects/-/follow-redirects-1.15.3.tgz}
@@ -2099,6 +2113,10 @@ packages:
       '@vue/server-renderer': 3.3.11(vue@3.3.11)
       '@vue/shared': 3.3.11
       typescript: 5.3.3
+
+  /webworkify-webpack@2.1.5:
+    resolution: {integrity: sha512-2akF8FIyUvbiBBdD+RoHpoTbHMQF2HwjcxfDvgztAX5YwbZNyrtfUMgvfgFVsgDhDPVTlkbb5vyasqDHfIDPQw==, tarball: https://registry.npmmirror.com/webworkify-webpack/-/webworkify-webpack-2.1.5.tgz}
+    dev: false
 
   /which@2.0.2:
     resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==, tarball: https://registry.npmmirror.com/which/-/which-2.0.2.tgz}
