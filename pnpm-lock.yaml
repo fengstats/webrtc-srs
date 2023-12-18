@@ -14,8 +14,14 @@ dependencies:
   vue:
     specifier: ^3.3.11
     version: 3.3.11(typescript@5.3.3)
+  vue-router:
+    specifier: '4'
+    version: 4.2.5(vue@3.3.11)
 
 devDependencies:
+  '@types/node':
+    specifier: ^20.10.5
+    version: 20.10.5
   '@vitejs/plugin-vue':
     specifier: ^4.5.2
     version: 4.5.2(vite@5.0.8)(vue@3.3.11)
@@ -30,7 +36,7 @@ devDependencies:
     version: 0.58.0(postcss@8.4.32)(vite@5.0.8)
   vite:
     specifier: ^5.0.8
-    version: 5.0.8(less@4.2.0)
+    version: 5.0.8(@types/node@20.10.5)(less@4.2.0)
   vue-tsc:
     specifier: ^1.8.25
     version: 1.8.25(typescript@5.3.3)
@@ -761,6 +767,12 @@ packages:
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==, tarball: https://registry.npmmirror.com/@types/estree/-/estree-1.0.5.tgz}
     dev: true
 
+  /@types/node@20.10.5:
+    resolution: {integrity: sha512-nNPsNE65wjMxEKI93yOP+NPGGBJz/PoN3kZsVLee0XMiJolxSekEVD8wRwBUBqkwc7UWop0edW50yrCQW4CyRw==, tarball: https://registry.npmmirror.com/@types/node/-/node-20.10.5.tgz}
+    dependencies:
+      undici-types: 5.26.5
+    dev: true
+
   /@unocss/astro@0.58.0(vite@5.0.8):
     resolution: {integrity: sha512-df+tEFO5eKXjQOwSWQhS9IdjD0sfLHLtn8U09sEKR2Nmh5CvpwyBxmvLQgOCilPou7ehmyKfsyGRLZg7IMp+Ew==, tarball: https://registry.npmmirror.com/@unocss/astro/-/astro-0.58.0.tgz}
     peerDependencies:
@@ -772,7 +784,7 @@ packages:
       '@unocss/core': 0.58.0
       '@unocss/reset': 0.58.0
       '@unocss/vite': 0.58.0(vite@5.0.8)
-      vite: 5.0.8(less@4.2.0)
+      vite: 5.0.8(@types/node@20.10.5)(less@4.2.0)
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -970,7 +982,7 @@ packages:
       chokidar: 3.5.3
       fast-glob: 3.3.2
       magic-string: 0.30.5
-      vite: 5.0.8(less@4.2.0)
+      vite: 5.0.8(@types/node@20.10.5)(less@4.2.0)
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -982,7 +994,7 @@ packages:
       vite: ^4.0.0 || ^5.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 5.0.8(less@4.2.0)
+      vite: 5.0.8(@types/node@20.10.5)(less@4.2.0)
       vue: 3.3.11(typescript@5.3.3)
     dev: true
 
@@ -1038,6 +1050,10 @@ packages:
     dependencies:
       '@vue/compiler-dom': 3.3.11
       '@vue/shared': 3.3.11
+
+  /@vue/devtools-api@6.5.1:
+    resolution: {integrity: sha512-+KpckaAQyfbvshdDW5xQylLni1asvNSGme1JFs8I1+/H5pHEhqUKMEQD/qn3Nx5+/nycBq11qAEi8lk+LXI2dA==, tarball: https://registry.npmmirror.com/@vue/devtools-api/-/devtools-api-6.5.1.tgz}
+    dev: false
 
   /@vue/language-core@1.8.25(typescript@5.3.3):
     resolution: {integrity: sha512-NJk/5DnAZlpvXX8BdWmHI45bWGLViUaS3R/RMrmFSvFMSbJKuEODpM4kR0F0Ofv5SFzCWuNiMhxameWpVdQsnA==, tarball: https://registry.npmmirror.com/@vue/language-core/-/language-core-1.8.25.tgz}
@@ -1994,6 +2010,10 @@ packages:
       mlly: 1.4.2
     dev: true
 
+  /undici-types@5.26.5:
+    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==, tarball: https://registry.npmmirror.com/undici-types/-/undici-types-5.26.5.tgz}
+    dev: true
+
   /unocss@0.58.0(postcss@8.4.32)(vite@5.0.8):
     resolution: {integrity: sha512-MSPRHxBqWN+1AHGV+J5uUy4//e6ZBK6O+ISzD0qrXcCD/GNtxk1+lYjOK2ltkUiKX539+/KF91vNxzhhwEf+xA==, tarball: https://registry.npmmirror.com/unocss/-/unocss-0.58.0.tgz}
     engines: {node: '>=14'}
@@ -2026,7 +2046,7 @@ packages:
       '@unocss/transformer-directives': 0.58.0
       '@unocss/transformer-variant-group': 0.58.0
       '@unocss/vite': 0.58.0(vite@5.0.8)
-      vite: 5.0.8(less@4.2.0)
+      vite: 5.0.8(@types/node@20.10.5)(less@4.2.0)
     transitivePeerDependencies:
       - postcss
       - rollup
@@ -2044,7 +2064,7 @@ packages:
       picocolors: 1.0.0
     dev: true
 
-  /vite@5.0.8(less@4.2.0):
+  /vite@5.0.8(@types/node@20.10.5)(less@4.2.0):
     resolution: {integrity: sha512-jYMALd8aeqR3yS9xlHd0OzQJndS9fH5ylVgWdB+pxTwxLKdO1pgC5Dlb398BUxpfaBxa4M9oT7j1g503Gaj5IQ==, tarball: https://registry.npmmirror.com/vite/-/vite-5.0.8.tgz}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -2072,6 +2092,7 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': 20.10.5
       esbuild: 0.19.9
       less: 4.2.0
       postcss: 8.4.32
@@ -2079,6 +2100,15 @@ packages:
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
+
+  /vue-router@4.2.5(vue@3.3.11):
+    resolution: {integrity: sha512-DIUpKcyg4+PTQKfFPX88UWhlagBEBEfJ5A8XDXRJLUnZOvcpMF8o/dnL90vpVkGaPbjvXazV/rC1qBKrZlFugw==, tarball: https://registry.npmmirror.com/vue-router/-/vue-router-4.2.5.tgz}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      '@vue/devtools-api': 6.5.1
+      vue: 3.3.11(typescript@5.3.3)
+    dev: false
 
   /vue-template-compiler@2.7.15:
     resolution: {integrity: sha512-yQxjxMptBL7UAog00O8sANud99C6wJF+7kgbcwqkvA38vCGF7HWE66w0ZFnS/kX5gSoJr/PQ4/oS3Ne2pW37Og==, tarball: https://registry.npmmirror.com/vue-template-compiler/-/vue-template-compiler-2.7.15.tgz}
