@@ -6,7 +6,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
 import flvjs from 'flv.js'
 import { NO_SUPPORT_TEXT, APP_STREAM_NAME } from '@/constant'
 
@@ -24,7 +23,8 @@ const playLiveMedia = () => {
   })
   flvPlayer.attachMediaElement(remoteVideoRef.value!)
   flvPlayer.load()
-  flvPlayer.play()
+  // NOTE: 通过 API 调用 play 后就没办法手动调节音量了
+  // flvPlayer.play()
 }
 </script>
 

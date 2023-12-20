@@ -11,7 +11,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
 import axios from 'axios'
 import { NO_SUPPORT_TEXT, APP_STREAM_NAME } from '@/constant'
 import playFlv from './play-flv.vue'
