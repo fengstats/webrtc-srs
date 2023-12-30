@@ -1,7 +1,7 @@
 <template>
   <button @click="playLiveMedia">flv.js 拉流播放</button>
   <p>
-    <video ref="remoteVideoRef" muted autoplay controls class="w-150 h-120 border-2 border-solid border-green"></video>
+    <video ref="remoteVideoRef" muted autoplay controls class="w-140 h-100 border-2 border-solid border-green"></video>
   </p>
 </template>
 

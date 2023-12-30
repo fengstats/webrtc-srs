@@ -4,7 +4,7 @@
   <div class="preview">
     <button @click="getUserMedia">分享内容并推流</button>
     <p>
-      <video ref="localVideoRef" muted autoplay class="w-150 h-120 border-2 border-solid border-blue"></video>
+      <video ref="localVideoRef" muted autoplay class="w-140 h-100 border-2 border-solid border-blue"></video>
     </p>
     <play-flv />
   </div>
@@ -59,8 +59,14 @@ const handleNegotiation = async () => {
 
   // 3. 将 offer 发送给 SRS 服务
   const { data } = await axios.post('http://localhost:1985/rtc/v1/publish/', {
-    api: '/rtc/v1/publish/', // 不写也行
-    streamurl: `webrtc://localhost:8080/${APP_STREAM_NAME}`,
+    // api 为空也行，最好也写上吧
+    api: '/rtc/v1/publish/',
+    // NOTE: 发现这个 streamurl 怎么写都行，主要拉流的时候参考 http://localhost:1985/api/v1/streams/
+    // 里面的 url 参数，用 http://localhost:8080 + url 即可，不过最好还是按照约定的格式来写
+    // streamurl: `/a/b`, // url 为 a/b
+    // streamurl: `a://b/c`, // url 为 __defaultApp__/c
+    // streamurl: `a://b/c/d`, // url 为 /c/d
+    streamurl: `webrtc://xxx/${APP_STREAM_NAME}`, // url 为 /${APP_STREAM_NAME}
     sdp: offer?.sdp,
   })
   if (data.code !== 0) {
@@ -77,5 +83,8 @@ const handleNegotiation = async () => {
   // 5. 将 answer 设置成远程描述
   // 至此，ICE 交换流程完成！
   rtcPC.value?.setRemoteDescription(answer)
+
+  // NOTE: 如果 SRS 返回为 code=0
+  // 确认代码没有问题，那么去看看 CANDIDATE 的 ip 是不是变了
 }
 </script>
